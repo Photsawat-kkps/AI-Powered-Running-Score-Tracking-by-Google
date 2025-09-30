@@ -21,12 +21,15 @@ We turned photos from **scoreboards, smartwatches, and treadmill panels** into *
 
 ## 1) Project Overview (Main Story)
 **Problem**
+
 In Sports Day’s running events, participants record their own results and submit a captured image via Google Form so the judges can aggregate and analyze the results. However, there are about **700 participants**, and the competition runs **every day for one week**. New images keep coming in across all 7 days, creating a huge volume to review. Doing this purely by people may be overwhelming and can lead to mistakes.
 
 **Solution**
+
 We looked for a way to reduce judges’ manual work, improve accuracy, and cut human error caused by the massive workload. We use **Google Cloud Vision** to detect text in images and turn it into the **distance** and **running time**. These values are then checked against the distance entered by the submitter to verify whether it’s truly correct.
 
 **Impact**
+
 This significantly reduces the judges’ workload, enables **daily result announcements**, and makes the competition more engaging because each day’s results are available quickly.
 
 🖼️ **Visual:** Swimlane diagram showing *Participant → Google Form → Drive → OCR Worker → Sheets → Summary/Dashboard*.

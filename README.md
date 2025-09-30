@@ -1,7 +1,9 @@
 # 🏃‍♀️ **Sports Day Reinvented**
 ## AI‑Powered Running Score Tracking (Google Cloud Vision)
 
-> A story‑style README for both **non‑technical** and **technical** readers. It explains the *why*, shows the *how*, and gives you the *code path* to reproduce. Visual cues (🖼️) indicate where to place images/diagrams. Deep dives live in the **Appendices** so the main story stays crisp.
+**Why this exists**  
+Sports Day results come as **photos** — scoreboards and watch/treadmill screens. Typing them into a sheet is slow and easy to get wrong. We use **Google Cloud Vision** to read the text, simple rules to pick out **time** and **distance**, and send the results to **Google Sheets** each day. Every number can be checked with its original photo. Read the main story for what we did; details and code are at the end. 
+![Running watch screen](image/running_watch.png "Watch sample")
 
 ---
 
@@ -252,3 +254,4 @@ python summarize_day.py  # write daily sheet named 2025-09-29
 - §5: **Results table** + small dashboard snapshot
 
 > Keep the **Main Story** flowing from §1→§6; push heavy regex, thresholds, env vars, and deployment steps to the **Appendices** for readers who want the nitty‑gritty.
+

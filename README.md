@@ -4,8 +4,7 @@
 **Why this exists**  
 Sports Day results come as **photos** — scoreboards and watch/treadmill screens. Typing them into a sheet is slow and easy to get wrong. We use **Google Cloud Vision** to read the text, simple rules to pick out **time** and **distance**, and send the results to **Google Sheets** each day. Every number can be checked with its original photo. Read the main story for what we did; details and code are at the end. 
 
-| ![Running watch screen](image/running_watch.png "Watch sample") |
-|:--:|
+![Running watch screen](image/running_watch.png "Watch sample")
 
 ---
 

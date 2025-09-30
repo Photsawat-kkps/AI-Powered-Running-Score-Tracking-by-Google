@@ -8,11 +8,10 @@ Sports Day results come as **photos** — scoreboards and watch/treadmill screen
 
 ---
 
-### TL;DR
+### Quick Summary
 We turned photos from **scoreboards, smartwatches, and treadmill panels** into **clean, validated results**—automatically. The system:
 - Reads text with **Google Cloud Vision API**
 - Extracts **time (HH:MM:SS)** and **distance (km)** with domain‑aware parsing
-- Applies **event rules** (Outdoor/Indoor)
 - Writes to a **Working Sheet**, then produces a **Daily Summary** (one sheet per date)
 - Minimizes manual work; humans only check anomalies
 
@@ -21,11 +20,11 @@ We turned photos from **scoreboards, smartwatches, and treadmill panels** into *
 ---
 
 ## 1) Project Overview (Main Story)
-**Problem** — Sports Day results were recorded from mixed photo inputs and typed into spreadsheets by hand. It was **slow**, **error‑prone**, and **hard to audit**.
+**Problem -** In Sports Day’s running events, participants record their own results and submit a captured image via Google Form so the judges can aggregate and analyze the results. However, there are about **700 participants**, and the competition runs **every day for one week**. New images keep coming in across all 7 days, creating a huge volume to review. Doing this purely by people may be overwhelming and can lead to mistakes.
 
-**Solution** — Use **Google Cloud Vision** (pre‑trained AI) to OCR uploaded images, then apply a **smart parser** to reliably extract running **time** and **distance**. For **Outdoor**, we read the primary photo (watch/mobile) and fall back to selfie if necessary. For **Indoor**, we read both **digital device** and **machine panel** and apply combined rules. Finally, we validate and write results into Google Sheets.
+**Solution -** We looked for a way to reduce judges’ manual work, improve accuracy, and cut human error caused by the massive workload. We use **Google Cloud Vision** to detect text in images and turn it into the **distance** and **running time**. These values are then checked against the distance entered by the submitter to verify whether it’s truly correct.
 
-**Impact** — Quicker announcements, consistent scoring, audit trail (every decision links back to the source photo), fewer disputes.
+**Impact -** This significantly reduces the judges’ workload, enables **daily result announcements**, and makes the competition more engaging because each day’s results are available quickly.
 
 🖼️ **Visual:** Swimlane diagram showing *Participant → Google Form → Drive → OCR Worker → Sheets → Summary/Dashboard*.
 

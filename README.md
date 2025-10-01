@@ -65,11 +65,14 @@ We process three photo contexts:
 ## 4) End‑to‑End Pipeline (Simplified)
 
 ### 4.1 OCR operation
-
+- A python service on **Cloud run** calls the **Cloud Vision API** for text detection ( all on **Google Cloud** ).
+- Detection results are written to a new column in the worksheet, and validation logic checks the values.
 ![OCR process](image/OCR_process.png "OCR process")
 
 ### 4.2 Summary result
-
+- Merge the distance and duration columns for indoor and outdoor runs using script - **summary_daily.py** 
+- Let the committee review and validate the data.
+### Finish
 ![Summary step](image/Summary_step.png "Summary step")
 
 

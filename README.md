@@ -84,8 +84,9 @@ We process three photo contexts:
 - Duration need not over 02:00:00 Hour --> If not in condition **Column "Value condition" = Time Over**
 **Outdoor validation**
 - This script will check photo both of running result 
-at column "รูปถ่ายแสดงระยะทาง Outdoor และเวลาจากอุปกรณ์สมาร์ทวอทช์ หรือแอปพลิเคชันจากมือถือ  (Photo showing distance and time from a smartwatch or mobile application)"
-and column = "รูปถ่ายตัวเองระหว่างร่วมกิจกรรมแบบ Outdoor (Selfie)"
+
+at **1st column** "รูปถ่ายแสดงระยะทาง Outdoor และเวลาจากอุปกรณ์สมาร์ทวอทช์ หรือแอปพลิเคชันจากมือถือ  (Photo showing distance and time from a smartwatch or mobile application)"
+and **2nd column** "รูปถ่ายตัวเองระหว่างร่วมกิจกรรมแบบ Outdoor (Selfie)"
 - When It found **Distance and Duration** at 1st column --> **Column "Value condition" =  OK**
 - If It not found at 1st column, It will continue checking at 2nd column, and If it found **Distance and Duration** --> **Column "Value condition" =  Miss Box**
 - If not found Distance and Duration --> **Column "Value condition" =  NG**

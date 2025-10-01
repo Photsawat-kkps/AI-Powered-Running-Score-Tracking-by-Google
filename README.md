@@ -61,20 +61,7 @@ We process three photo contexts:
 
 ---
 
-## 4) End‑to‑End Pipeline (Main Story)
-```
-Google Form → Google Drive (images) + Google Sheet (Form Responses 1)
-                    ↓
-               OCR Worker (ocr_sheet)
-                    ↓
-        Vision API → OCR Text → Smart Parsing
-                    ↓
-      Validation & Business Rules (Outdoor/Indoor)
-                    ↓
-           Working Sheet  (… (Working))
-                    ↓
-          Daily Summary (summarize_day → YYYY‑MM‑DD)
-```
+## 4) End‑to‑End Pipeline (Simplified)
 
 ![OCR process](image/OCR_process.png "OCR process")
 

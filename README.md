@@ -82,6 +82,7 @@ We process three photo contexts:
 **Running validation**
 - Distance need at least 2.00 km --> If not in condition **Column "Value condition" = Distance Insufficient**
 - Duration need not over 02:00:00 Hour --> If not in condition **Column "Value condition" = Time Over**
+
 **Outdoor validation**
 - This script will check photo both of running result 
 

@@ -77,48 +77,15 @@ We process three photo contexts:
 ![Summary step](image/Summary_step.png "Summary step")
 
 
+### Additional Project Details
+### 4.3 Job Behavior (`ocr_sheet.py`)
+**Running validation**
+- Distance need at least 2.00 km --> If not in condition **Column "Value condition" = Distance Insufficient**
+- Duration need not over 02:00:00 Hour --> If not in condition **Column "Value condition" = Time Over**
+**Outdoor validation**
 
-### 4.1 Worker Behavior (`ocr_sheet`)
-**Idempotent ingest**
-- **First run** → copy all raw rows to Working; OCR **every** row
-- **Next runs** → only new rows; if no new rows, **backfill** rows that still have empty statuses
 
-**Outdoor flow**
-- Primary image: smartwatch/mobile (fallback: selfie only if primary is an image but parsing failed)
-- Write `Out_Distance_km`, `Out_Duration_hms`, `Out_Status`
-- **Status precedence** *(applies only if initial status is `OK`)*:
-  1) dist < 2.00 **and** time > 02:00:00 → `All Condition Insufficient`
-  2) dist < 2.00 → `Distance Insufficient`
-  3) time > 02:00:00 → `Time Over`
 
-**Indoor flow**
-- From **digital** photo → `digi_distance_km`, `digi_duration_hms`
-- From **machine** panel → `mach_distance_km`, `mach_duration_hms`
-- `In_Status` decision:
-  - If any of `{digi_duration_hms, mach_distance_km, mach_duration_hms}` missing → `NG`
-  - Else evaluate in order:
-    1) both dists < 2.00 **and** both durs > 02:00:00 → `All Condition Insufficient`
-    2) both dists < 2.00 → `Distance Insufficient`
-    3) both durs > 02:00:00 → `Time Over`
-    4) otherwise → `OK`
-
-**Smart date**
-- Extract `Shot_Date` (e.g., `3/17/2025`) from OCR text (supports TH/EN month names, BE → CE).
-
-🖼️ **Visual:** Architecture diagram with “decision boxes” for Outdoor/Indoor.
-
-### 4.2 Parser Highlights (duration & km)
-- Time patterns: `HH:MM:SS` / `MM:SS` / `MM:SS.ff` / spoken (`1h 20m 35s`, `32m 49s`)
-- Mixed separators normalized: `01.13.52` → `01:13:52` (when safe)
-- Pace guardrails: avoid treating `MM:SS / km` as **time**
-- Distance candidates: decimals in **0.2–80.0** (prefer **2.0–50.0**), avoid `km/h`
-- Anchor logic: tokens near *Distance/km* labels weigh more
-- Packed tokens: infer from `3–4` digits near anchors (e.g., `905` → `9.05 km`) if needed
-- Pace‑assisted inference: if pace + time exist, pick distance closest to `time / pace`
-
-> Deep dive: [Appendix A — Parsing Rules](#appendix-a-parsing-rules-cheat-sheet)
-
----
 
 ## 5) Results (Main Story)
 **What improved**

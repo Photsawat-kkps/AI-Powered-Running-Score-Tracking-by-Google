@@ -47,16 +47,6 @@ We process three photo contexts:
 - **Storage**: Google Drive (form uploads)
 - **Automation**: Cloud Scheduler (triggers worker and daily summary)
 - **Auth**: Service Account (Sheets + Drive scopes)
-- **Logging**: Google Cloud Logging (JSON)
-
-```python
-from google.cloud import vision
-client = vision.ImageAnnotatorClient()
-resp = client.text_detection(image=vision.Image(content=img_bytes))
-text = resp.full_text_annotation.text if resp.full_text_annotation else ""
-```
-
-> Deep dive: [Appendix D — Setup & Deployment](#appendix-d-setup--deployment)
 
 ---
 

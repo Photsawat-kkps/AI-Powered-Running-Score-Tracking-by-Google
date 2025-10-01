@@ -85,7 +85,7 @@ We process three photo contexts:
 ![Summary step](image/Summary_step.png "Summary step")
 
 
-### Script logic and detail 
+### - Script logic and detail -  
 ### 4.3 Script Behavior (`ocr_sheet.py`)
 **Result**
 1. Distance at **column "Out_Distance_km"**

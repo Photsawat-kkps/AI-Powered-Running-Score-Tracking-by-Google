@@ -80,9 +80,10 @@ We process three photo contexts:
 ### Additional Project Details
 ### 4.3 Script Behavior (`ocr_sheet.py`)
 **Result**
-- 1. Distance at **column "Out_Distance_km"**
-- 2. Duration at **column "Out_Duration_hms"**
-- 3. Date on running record photos **column "Shot_Date"**
+1. Distance at **column "Out_Distance_km"**
+2. Duration at **column "Out_Duration_hms"**
+3. Date on running record photos **column "Shot_Date"**
+
 **Running validation**
 - Distance need at least 2.00 km --> If not in condition **Column "Out_Status" = Distance Insufficient**
 - Duration need not over 02:00:00 Hour --> If not in condition **Column "Out_Status" = Time Over**
@@ -107,12 +108,12 @@ We process three photo contexts:
 
 ### 4.4 Script Behavior (`summary_daily.py`)
 **Result**
-- 1. Column **"Distance"** : Value from merging between Distance of Outdoor and Indoor.
-- 2. Column **"Duration"** : Value from merging between Duration of Outdoor and Indoor.
-- 3. Column **"Value condition"** : Value from merging between "Out_Status" and "In_Status" of Outdoor and Indoor.
-- 4. Column **"Check distance** : with input distance" : If it equal --> "OK", not equal --> "Different" , not have to compare --> "N/A"
-- 5. Column **"Check Date"** : If it equal --> "OK", not equal --> "Different" , not have to compare --> "N/A"
-- 6. Column **"Summary"** : if column "Value condition" = OK, "Check distance with input distance" = OK and "Check Date" = OK --> answer "OK", if not answer "NG"
+1. Column **"Distance"** : Value from merging between Distance of Outdoor and Indoor.
+2. Column **"Duration"** : Value from merging between Duration of Outdoor and Indoor.
+3. Column **"Value condition"** : Value from merging between "Out_Status" and "In_Status" of Outdoor and Indoor.
+4. Column **"Check distance** : with input distance" : If it equal --> "OK", not equal --> "Different" , not have to compare --> "N/A"
+5. Column **"Check Date"** : If it equal --> "OK", not equal --> "Different" , not have to compare --> "N/A"
+6. Column **"Summary"** : if column "Value condition" = OK, "Check distance with input distance" = OK and "Check Date" = OK --> answer "OK", if not answer "NG"
 
 
 

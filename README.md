@@ -34,8 +34,6 @@ We process three photo contexts:
 - Participants upload via **Google Forms** → files land in **Google Drive**, metadata in **Google Sheets** (`Form Responses 1`).
 - Our worker ingests new rows, fetches images, OCRs them, parses values, then writes results to the **Working** tab.
 
-🖼️ **Visual (3‑up grid):** exemplar *scoreboard / watch / treadmill* images with annotated areas the OCR relies on.
-
 ![OCR process](image/OCR_process.png "OCR process")
 
 ---

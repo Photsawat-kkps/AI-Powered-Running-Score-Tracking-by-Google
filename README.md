@@ -25,9 +25,10 @@ In Sports Day’s running events, participants record their own results and subm
 
 ![Tired](image/Tired.jpg "Tried")
 
-
 **- Solution -**  
 We looked for a way to reduce judges’ manual work, improve accuracy, and cut human error caused by the massive workload. We use **Google Cloud Vision** to detect text in images and turn it into the **distance** and **running time**. These values are then checked against the distance entered by the submitter to verify whether it’s truly correct.
+
+![Detection](image/Detection.png "Detection")
 
 **- Impact -**  
 This significantly reduces the judges’ workload, enables **daily result announcements**, and makes the competition more engaging because each day’s results are available quickly.

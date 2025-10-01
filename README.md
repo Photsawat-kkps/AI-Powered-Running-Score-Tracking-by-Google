@@ -77,7 +77,7 @@ We process three photo contexts:
 ![Summary step](image/Summary_step.png "Summary step")
 
 
-### Additional Project Details
+### Script logic and detail 
 ### 4.3 Script Behavior (`ocr_sheet.py`)
 **Result**
 1. Distance at **column "Out_Distance_km"**
@@ -119,6 +119,12 @@ We process three photo contexts:
 6. Column **"Summary"** : if column "Value condition" = OK, "Check distance with input distance" = OK and "Check Date" = OK --> answer "OK", if not answer "NG"
 
 ![Summary result](image/summary_result.png "Summary result")
+
+---
+
+## 5) If you want to improve parser logic
+
+
 
 
 

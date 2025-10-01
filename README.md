@@ -19,7 +19,7 @@ We looked for a way to reduce judges’ manual work, improve accuracy, and cut h
 
 ![Detection](image/Detection.png "Detection")
 
-**- Impact!! -**  
+**- Impact !! -**  
 This significantly reduces the judges’ workload, enables **daily result announcements**, and makes the competition more engaging because each day’s results are available quickly.
 
 ---

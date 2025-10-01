@@ -31,8 +31,10 @@ We process three photo contexts:
 - **Treadmill machine panels** (Indoor distance/time/pace)
 
 **Collection Flow**
-- Participants upload via **Google Forms** → files land in **Google Drive**, metadata in **Google Sheets** (`Form Responses 1`).
-- Our worker ingests new rows, fetches images, OCRs them, parses values, then writes results to the **Working** tab.
+- Participants submit via **Google Forms**. Photos are saved to **Google Drive**, and responses data to **Google Sheets**.
+- A python service on **Cloud run** calls the **Cloud Vision API** for text detection ( all on **Google Cloud** ).
+- Detection results are written to a new column in the worksheet, and validation logic checks the values.
+- The committee reviews and confirms.
 
 ![OCR process](image/OCR_process.png "OCR process")
 

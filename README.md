@@ -30,6 +30,9 @@ We process three photo contexts:
 - **Smartwatch screens** (Garmin/Apple/Android; Outdoor duration & distance)
 - **Treadmill machine panels** (Indoor distance/time/pace)
 
+![Data source](image/datasource.png "Data source")
+
+
 **Collection Flow**
 - Participants submit via **Google Forms**. Photos are saved to **Google Drive**, and responses data to **Google Sheets**.
 - A python service on **Cloud run** calls the **Cloud Vision API** for text detection ( all on **Google Cloud** ).

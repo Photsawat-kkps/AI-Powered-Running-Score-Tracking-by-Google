@@ -32,23 +32,22 @@ We process three photo contexts:
 
 ![Data source](image/datasource.png "Data source")
 
-
 **Collection Flow**
 - Participants submit via **Google Forms**. Photos are saved to **Google Drive**, and responses data to **Google Sheets**.
 - A python service on **Cloud run** calls the **Cloud Vision API** for text detection ( all on **Google Cloud** ).
 - Detection results are written to a new column in the worksheet, and validation logic checks the values.
 - The committee reviews and confirms.
 
-![OCR process](image/OCR_process.png "OCR process")
+![Submit](image/Submit_data.png "Submit")
 
 ---
 
 ## 3) Tech Stack (Quick)
 - **AI**: Google Cloud Vision API (Text Detection)
 - **Runtime**: Python 3.11 (Cloud Run / Cloud Functions or local)
-- **Data**: Google Sheets (Raw tab + Working tab + per‑day Summary tabs)
+- **Data**: Google Sheets 
 - **Storage**: Google Drive (form uploads)
-- **Automation**: Cloud Scheduler (triggers worker and daily summary)
+- **Automation**: Cloud Scheduler (triggers worker)
 - **Auth**: Service Account (Sheets + Drive scopes)
 
 ---
@@ -67,6 +66,8 @@ Google Form → Google Drive (images) + Google Sheet (Form Responses 1)
                     ↓
           Daily Summary (summarize_day → YYYY‑MM‑DD)
 ```
+
+![OCR process](image/OCR_process.png "OCR process")
 
 ### 4.1 Worker Behavior (`ocr_sheet`)
 **Idempotent ingest**

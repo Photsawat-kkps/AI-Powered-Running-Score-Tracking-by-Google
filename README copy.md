@@ -260,3 +260,8 @@ python summarize_day.py  # write daily sheet named 2025-09-29
 
 > Keep the **Main Story** flowing from §1→§6; push heavy regex, thresholds, env vars, and deployment steps to the **Appendices** for readers who want the nitty‑gritty.
 
+**Collection Flow**
+- Participants submit via **Google Forms**. Photos are saved to **Google Drive**, and responses data to **Google Sheets**.
+- A python service on **Cloud run** calls the **Cloud Vision API** for text detection ( all on **Google Cloud** ).
+- Detection results are written to a new column in the worksheet, and validation logic checks the values.
+- The committee reviews and confirms.

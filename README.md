@@ -24,7 +24,7 @@ This significantly reduces the judges’ workload, enables **daily result announ
 
 ---
 
-## 2) Event Context & OCR Inputs (Main Story)
+## 2) Event Context & Submitted data
 We process three photo contexts:
 - **Scoreboards** (handwritten/printed)  
 - **Smartwatch screens** (Garmin/Apple/Android; Outdoor duration & distance)
@@ -33,12 +33,20 @@ We process three photo contexts:
 ![Data source](image/datasource.png "Data source")
 
 **Collection Flow**
-- Participants submit via **Google Forms**. Photos are saved to **Google Drive**, and responses data to **Google Sheets**.
-- A python service on **Cloud run** calls the **Cloud Vision API** for text detection ( all on **Google Cloud** ).
-- Detection results are written to a new column in the worksheet, and validation logic checks the values.
-- The committee reviews and confirms.
+- Participants submit via **Google Forms** --> Photos are saved to **Google Drive**, and responses data to **Google Sheets**.
 
 ![Submit](image/Submit_data.png "Submit")
+
+**Response schema**
+- เลือกทีมของตัวเอง (Select your team)
+- รหัสพนักงาน (Employee ID)
+- ระยะทาง หน่วยกิโลเมตร  (Distance in km unit)
+- ลักษณะสถานที่วิ่ง (Where did you run?)
+- รูปถ่ายแสดงระยะทาง Outdoor และเวลาจากอุปกรณ์สมาร์ทวอทช์ หรือแอปพลิเคชันจากมือถือ  (Photo showing distance and time from a smartwatch or mobile application)
+- รูปถ่ายตัวเองระหว่างร่วมกิจกรรมแบบ Outdoor (Selfie)
+- รูปถ่ายแสดงระยะทาง Indoor และเวลาจากอุปกรณ์สมาร์ทวอทช์ หรือแอปพลิเคชันจากมือถือ  (Photo showing distance and time from a smartwatch or mobile application)
+- รูปถ่ายระยะทางจากเครื่องออกกำลังกาย (Photo of the distance display from the exercise machine.)
+- รูปถ่ายตัวเองระหว่างร่วมกิจกรรมแบบ Indoor (Selfie)
 
 ---
 

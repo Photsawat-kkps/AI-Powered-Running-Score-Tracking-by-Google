@@ -78,13 +78,13 @@ We process three photo contexts:
 
 
 ### Additional Project Details
-### 4.3 Job Behavior (`ocr_sheet.py`)
+### 4.3 Script Behavior (`ocr_sheet.py`)
 **Running validation**
 - Distance need at least 2.00 km --> If not in condition **Column "Value condition" = Distance Insufficient**
 - Duration need not over 02:00:00 Hour --> If not in condition **Column "Value condition" = Time Over**
 
 **Outdoor validation**
-- This script will check photo both of running result 
+- For person that runs in outdoor **("ลักษณะสถานที่วิ่ง (Where did you run?)" = กลางแจ้ง/นอกบ้าน (Outdoor))** script will check photo both of running result 
 
   - at **1st column** "รูปถ่ายแสดงระยะทาง Outdoor และเวลาจากอุปกรณ์สมาร์ทวอทช์ หรือแอปพลิเคชันจากมือถือ  (Photo showing distance and time from a smartwatch or mobile application)"
 
@@ -94,6 +94,7 @@ We process three photo contexts:
 - If not found Distance and Duration --> **Column "Value condition" =  NG**
 
 **Indoor validation**
+- For 
 
 
 

@@ -65,7 +65,7 @@ We process three photo contexts:
 ## 4) End‑to‑End Pipeline (Simplified)
 
 ### 4.1 OCR operation
-- A python service on **Cloud run** calls the **Cloud Vision API** for text detection ( all on **Google Cloud** ).
+- A python script - **ocr_sheet.py** on **Cloud run** calls the **Cloud Vision API** for text detection ( all on **Google Cloud** ).
 - Detection results are written to a new column in the worksheet, and validation logic checks the values.
 
 ![OCR process](image/OCR_process.png "OCR process")

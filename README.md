@@ -72,7 +72,7 @@ We process three photo contexts:
 
 ### 4.2 Summary result
 - Summary daily datas and merge the distance and duration columns for indoor and outdoor runs using script - **summary_daily.py** 
-- Let the committee review and validate the data --> Finish !!
+- **Let the committee review and validate the data --> Finish !!**
 
 ![Summary step](image/Summary_step.png "Summary step")
 

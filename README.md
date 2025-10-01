@@ -95,8 +95,8 @@ We process three photo contexts:
 
 **Indoor validation**
 - For person that runs at indoor **("ลักษณะสถานที่วิ่ง (Where did you run?)" = ในร่ม (Indoor))** 
-    - Script will check **Distance** at 1st column "รูปถ่ายระยะทางจากเครื่องออกกำลังกาย (Photo of the distance display from the exercise machine.)"
-    - Script will check **Duration** at both of 2nd column "รูปถ่ายแสดงระยะทาง Indoor และเวลาจากอุปกรณ์สมาร์ทวอทช์ หรือแอปพลิเคชันจากมือถือ  (Photo showing distance and time from a smartwatch or mobile application)" and 1st column "รูปถ่ายระยะทางจากเครื่องออกกำลังกาย (Photo of the distance display from the exercise machine.)" 
+    - Script will check **Distance** at **1st column** "รูปถ่ายระยะทางจากเครื่องออกกำลังกาย (Photo of the distance display from the exercise machine.)"
+    - Script will check **Duration** at **both of 2nd column** "รูปถ่ายแสดงระยะทาง Indoor และเวลาจากอุปกรณ์สมาร์ทวอทช์ หรือแอปพลิเคชันจากมือถือ  (Photo showing distance and time from a smartwatch or mobile application)" and 1st column "รูปถ่ายระยะทางจากเครื่องออกกำลังกาย (Photo of the distance display from the exercise machine.)" 
 - If It found **Duration** at both of 1st column and 2nd column --> Choose minimum duration for answer
 - If It not found **Distance and Duration** --> **Column "Value condition" =  OK**
 - If It not found **Distance and Duration** --> **Column "Value condition" =  NG**

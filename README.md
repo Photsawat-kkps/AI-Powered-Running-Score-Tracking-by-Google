@@ -57,7 +57,7 @@ We process three photo contexts:
 - **Intake (Form UI)**: Google Forms
 - **Data**: Google Sheets 
 - **Storage**: Google Drive (form uploads)
-- **Automation**: Cloud Scheduler (triggers worker)
+- **Automation**: Cloud Scheduler (triggers worker) [Additional!!]
 - **Auth**: Service Account (Sheets + Drive scopes)
 
 ---

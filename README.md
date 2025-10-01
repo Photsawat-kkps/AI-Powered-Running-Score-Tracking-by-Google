@@ -106,6 +106,8 @@ We process three photo contexts:
 - If It not found **Distance and Duration** --> **Column "In_Status" =  OK**
 - If It not found **Distance and Duration** --> **Column "In_Status" =  NG**
 
+![ocrscipt_result](image/indoor_outdoor_result.png "ocrscipt_result")
+
 ### 4.4 Script Behavior (`summary_daily.py`)
 **Result**
 1. Column **"Distance"** : Value from merging between Distance of Outdoor and Indoor.

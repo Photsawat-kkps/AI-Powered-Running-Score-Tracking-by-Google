@@ -37,7 +37,7 @@ We process three photo contexts:
 
 ![Submit](image/Submit_data.png "Submit")
 
-**Response schema**
+**Response Schema**
 - เลือกทีมของตัวเอง (Select your team)
 - รหัสพนักงาน (Employee ID)
 - ระยะทาง หน่วยกิโลเมตร  (Distance in km unit)

@@ -51,6 +51,7 @@ We process three photo contexts:
 ---
 
 ## 3) Tech Stack (Quick)
+- **Cloud**: Google cloud platform
 - **AI**: Google Cloud Vision API (Text Detection)
 - **Runtime**: Python 3.11 (Cloud Run / Cloud Functions or local)
 - **Intake (Form UI)**: Google Forms

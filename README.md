@@ -50,7 +50,7 @@ We process three photo contexts:
 
 ---
 
-## 3) Tech Stack (Quick)
+## 3) Tech Stack List
 - **Cloud**: Google cloud platform
 - **AI**: Google Cloud Vision API (Text Detection)
 - **Runtime**: Python 3.11 (Cloud Run / Cloud Functions or local)

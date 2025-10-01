@@ -8,6 +8,17 @@ Sports Day results come as **photos** — scoreboards and watch/treadmill screen
 
 ---
 
+### Quick Summary
+We turned photos from **scoreboards, smartwatches, and treadmill panels** into **clean, validated results**—automatically. The system:
+- Reads text with **Google Cloud Vision API**
+- Extracts **time (HH:MM:SS)** and **distance (km)** with domain‑aware parsing
+- Writes to a **Working Sheet**, then produces a **Daily Summary** (one sheet per date)
+- Minimizes manual work; humans only check anomalies
+
+🖼️ **Hero visual (top banner):** *Before → After* collage: raw photo → OCR text highlights → neat result table.
+
+---
+
 ## 1) Project Overview (Main Story)
 **- Problem -**  
 In Sports Day’s running events, participants record their own results and submit a captured image via Google Form so the judges can aggregate and analyze the results. However, there are about **700 participants**, and the competition runs **every day for one week**. New images keep coming in across all 7 days, creating a huge volume to review. Doing this purely by people may be overwhelming and can lead to mistakes.

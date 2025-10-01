@@ -33,8 +33,6 @@ We looked for a way to reduce judges’ manual work, improve accuracy, and cut h
 **- Impact -**  
 This significantly reduces the judges’ workload, enables **daily result announcements**, and makes the competition more engaging because each day’s results are available quickly.
 
-![OCR process](image/OCR_process.png "OCR process")
-
 ---
 
 ## 2) Event Context & OCR Inputs (Main Story)
@@ -49,7 +47,7 @@ We process three photo contexts:
 
 🖼️ **Visual (3‑up grid):** exemplar *scoreboard / watch / treadmill* images with annotated areas the OCR relies on.
 
-> Deep dive: [Appendix C — Sample Dataset & Annotations](#appendix-c-sample-dataset--annotations)
+![OCR process](image/OCR_process.png "OCR process")
 
 ---
 

@@ -87,6 +87,7 @@ We process three photo contexts:
 **Running validation**
 - Distance need at least 2.00 km --> If not in condition **Column "Out_Status" = Distance Insufficient**
 - Duration need not over 02:00:00 Hour --> If not in condition **Column "Out_Status" = Time Over**
+- if Distance and Duration aren't in condition **Column "Out_Status" = All Cindition Insufficient**
 
 **Outdoor validation**
 - For person that runs at outdoor **("ลักษณะสถานที่วิ่ง (Where did you run?)" = กลางแจ้ง/นอกบ้าน (Outdoor))** script will check photo both of running result 

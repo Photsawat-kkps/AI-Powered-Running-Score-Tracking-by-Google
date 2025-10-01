@@ -123,6 +123,9 @@ We process three photo contexts:
 ---
 
 ## 5) If you want to improve parser logic
+1. Improve detecting "Distance" --> can improve at block **"Smart parsers"**
+2. Improve detecting "Duration" --> can improve at block **"Smart parsers"**
+3. Improve detecting "Date" --> can improve at block **Smart Date Parser (returns M/D/YYYY)"**
 
 
 

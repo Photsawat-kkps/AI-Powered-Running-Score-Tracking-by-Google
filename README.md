@@ -79,9 +79,13 @@ We process three photo contexts:
 
 ### Additional Project Details
 ### 4.3 Script Behavior (`ocr_sheet.py`)
+**Result**
+- 1. Distance at **column "Out_Distance_km"**
+- 2. Duration at **column "Out_Duration_hms"**
+- 3. Date on running record photos **column "Shot_Date"**
 **Running validation**
-- Distance need at least 2.00 km --> If not in condition **Column "Value condition" = Distance Insufficient**
-- Duration need not over 02:00:00 Hour --> If not in condition **Column "Value condition" = Time Over**
+- Distance need at least 2.00 km --> If not in condition **Column "Out_Status" = Distance Insufficient**
+- Duration need not over 02:00:00 Hour --> If not in condition **Column "Out_Status" = Time Over**
 
 **Outdoor validation**
 - For person that runs at outdoor **("ลักษณะสถานที่วิ่ง (Where did you run?)" = กลางแจ้ง/นอกบ้าน (Outdoor))** script will check photo both of running result 
@@ -89,17 +93,30 @@ We process three photo contexts:
   - at **1st column** "รูปถ่ายแสดงระยะทาง Outdoor และเวลาจากอุปกรณ์สมาร์ทวอทช์ หรือแอปพลิเคชันจากมือถือ  (Photo showing distance and time from a smartwatch or mobile application)"
 
   - and **2nd column** "รูปถ่ายตัวเองระหว่างร่วมกิจกรรมแบบ Outdoor (Selfie)"
-- When It found **Distance and Duration** at **1st column** --> **Column "Value condition" =  OK**
-- If It not found at **1st column**, It will continue checking at **2nd column**, and If it found **Distance and Duration** --> **Column "Value condition" =  Miss Box**
-- If not found Distance and Duration --> **Column "Value condition" =  NG**
+- When It found **Distance and Duration** at **1st column** --> **Column "Out_Status" =  OK**
+- If It not found at **1st column**, It will continue checking at **2nd column**, and If it found **Distance and Duration** --> **Column "Out_Status" =  Miss Box**
+- If not found Distance and Duration --> **Column "Out_Status" =  NG**
 
 **Indoor validation**
 - For person that runs at indoor **("ลักษณะสถานที่วิ่ง (Where did you run?)" = ในร่ม (Indoor))** 
     - Script will check **Distance** at **1st column** "รูปถ่ายระยะทางจากเครื่องออกกำลังกาย (Photo of the distance display from the exercise machine.)"
     - Script will check **Duration** at **both of 2nd column** "รูปถ่ายแสดงระยะทาง Indoor และเวลาจากอุปกรณ์สมาร์ทวอทช์ หรือแอปพลิเคชันจากมือถือ  (Photo showing distance and time from a smartwatch or mobile application)" and 1st column "รูปถ่ายระยะทางจากเครื่องออกกำลังกาย (Photo of the distance display from the exercise machine.)" 
 - If It found **Duration** at both of 1st column and 2nd column --> Choose minimum duration for answer
-- If It not found **Distance and Duration** --> **Column "Value condition" =  OK**
-- If It not found **Distance and Duration** --> **Column "Value condition" =  NG**
+- If It not found **Distance and Duration** --> **Column "In_Status" =  OK**
+- If It not found **Distance and Duration** --> **Column "In_Status" =  NG**
+
+### 4.4 Script Behavior (`summary_daily.py`)
+**Result**
+- 1. Column **"Distance"** : Value from merging between Distance of Outdoor and Indoor.
+- 2. Column **"Duration"** : Value from merging between Duration of Outdoor and Indoor.
+- 3. Column **"Value condition"** : Value from merging between "Out_Status" and "In_Status" of Outdoor and Indoor.
+- 4. Column **"Check distance** : with input distance" : If it equal --> "OK", not equal --> "Different" , not have to compare --> "N/A"
+- 5. Column **"Check Date"** : If it equal --> "OK", not equal --> "Different" , not have to compare --> "N/A"
+- 6. Column **"Summary"** : if column "Value condition" = OK, "Check distance with input distance" = OK and "Check Date" = OK --> answer "OK", if not answer "NG"
+
+
+
+
 
 
 

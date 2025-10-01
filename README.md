@@ -64,7 +64,15 @@ We process three photo contexts:
 
 ## 4) End‑to‑End Pipeline (Simplified)
 
+### 4.1 OCR operation
+
 ![OCR process](image/OCR_process.png "OCR process")
+
+### 4.2 Summary result
+
+![Summary step](image/Summary_step.png "Summary step")
+
+
 
 ### 4.1 Worker Behavior (`ocr_sheet`)
 **Idempotent ingest**

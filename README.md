@@ -84,7 +84,7 @@ We process three photo contexts:
 - Duration need not over 02:00:00 Hour --> If not in condition **Column "Value condition" = Time Over**
 
 **Outdoor validation**
-- For person that runs in outdoor **("ลักษณะสถานที่วิ่ง (Where did you run?)" = กลางแจ้ง/นอกบ้าน (Outdoor))** script will check photo both of running result 
+- For person that runs at outdoor **("ลักษณะสถานที่วิ่ง (Where did you run?)" = กลางแจ้ง/นอกบ้าน (Outdoor))** script will check photo both of running result 
 
   - at **1st column** "รูปถ่ายแสดงระยะทาง Outdoor และเวลาจากอุปกรณ์สมาร์ทวอทช์ หรือแอปพลิเคชันจากมือถือ  (Photo showing distance and time from a smartwatch or mobile application)"
 
@@ -94,7 +94,15 @@ We process three photo contexts:
 - If not found Distance and Duration --> **Column "Value condition" =  NG**
 
 **Indoor validation**
-- For 
+- For person that runs at indoor **("ลักษณะสถานที่วิ่ง (Where did you run?)" = ในร่ม (Indoor))** 
+    - Script will check **Distance** at 1st column "รูปถ่ายระยะทางจากเครื่องออกกำลังกาย (Photo of the distance display from the exercise machine.)"
+    - Script will check **Duration** at both of 2nd column "รูปถ่ายแสดงระยะทาง Indoor และเวลาจากอุปกรณ์สมาร์ทวอทช์ หรือแอปพลิเคชันจากมือถือ  (Photo showing distance and time from a smartwatch or mobile application)" and 1st column "รูปถ่ายระยะทางจากเครื่องออกกำลังกาย (Photo of the distance display from the exercise machine.)" 
+- If It found **Duration** at both of 1st column and 2nd column --> Choose minimum duration for answer
+- If It not found **Distance and Duration** --> **Column "Value condition" =  OK**
+- If It not found **Distance and Duration** --> **Column "Value condition" =  NG**
+
+
+
 
 
 

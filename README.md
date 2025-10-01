@@ -70,12 +70,17 @@ We process three photo contexts:
   How to use?
   1. Copy **ocr_sheet.py** to cloud run
   2. Edit the **sheet_id**
+  3. **Click Run** 
 
 ![OCR process](image/OCR_process.png "OCR process")
 
 ### 4.2 Summary result
 - Summary daily datas and merge the distance and duration columns for indoor and outdoor runs using script - **summary_daily.py** 
 - **Let the committee review and validate the data --> Finish !!**
+  How to use?
+  1. Copy **osummary_daily.py** to cloud run
+  2. Edit the **sheet_id**
+  3. **Click Run** 
 
 ![Summary step](image/Summary_step.png "Summary step")
 

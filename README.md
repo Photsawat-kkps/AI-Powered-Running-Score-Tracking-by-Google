@@ -8,7 +8,16 @@ Sports Day results come as **photos** — scoreboards and watch/treadmill screen
 
 ---
 
-## 1) Project Overview (Main Story)
+## Agenda
+  1. Project Overview 
+  2. Event Context & Submitted data
+  3. Prepare Tech Stack
+  4. End‑to‑End Pipeline (Simplified)
+  5. Improvement
+
+---
+
+## 1) Project Overview 
 **- Problem -**  
 In Sports Day’s running events, participants record their own results and submit a captured image via Google Form so the judges can aggregate and analyze the results. However, there are about **700 participants**, and the competition runs **every day for one week**. New images keep coming in across all 7 days, creating a huge volume to review. Doing this purely by people may be overwhelming and can lead to mistakes.
 
@@ -318,7 +327,7 @@ For run logic operation automatically, Example logic runs every 30 minutes --> T
 
 ---
 
-## 5) If you want to improve parser logic
+## 5) Improvement : If you want to improve parser logic
 1. Improve detecting "Distance" --> can improve at block **"Smart parsers"**
 2. Improve detecting "Duration" --> can improve at block **"Smart parsers"**
 3. Improve detecting "Date" --> can improve at block **Smart Date Parser (returns M/D/YYYY)"**

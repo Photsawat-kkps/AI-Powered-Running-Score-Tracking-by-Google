@@ -77,6 +77,9 @@ We process three photo contexts:
     * Search and Click "Google cloud console" web
     * Click "Get started for free" --> Fill information --> Click "Agree & continue"
     * Add credit card **"Important"** (If want to use service following this project, have to add credit card, but this project don't have cost because It is in free tier condition of google could)
+    
+        ![google cloud](image/google_cloud.png "google cloud")
+        
     * Click Hamburgur button( Navigation Menu. )
     * Click "IAM & Admin"
     * Manage Resources

@@ -64,11 +64,15 @@ We process three photo contexts:
   * Link response with Google sheet 
     - Click "Response"
     - Click "View in Sheets"
+
       ![forms response page](image/forms_response_page.png "forms response page")
+
     - tab "Select destination for response" --> Select "Create a new spreadsheet"
     - Click "Create"
   * Click "View in Sheets" --> You will go to sheet that have response from participants
+
       ![response data](image/response_data.png "response data")
+      
 - **Cloud**: Google cloud platform - For using google cloud resources
     - Search and Click "Google cloud console" web
     - Click "Get started for free" --> Fill information --> Click "Agree & continue"

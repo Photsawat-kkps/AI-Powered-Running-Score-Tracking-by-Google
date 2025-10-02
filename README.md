@@ -76,14 +76,14 @@ We process three photo contexts:
     - Manage Resources
     - Click "create project"
     - Fill information
-      * Project name : **(Up on you)**
+      * Project name : **OCR_Running**
       * Location : No organization
 - **Runtime**: (Cloud Run / Cloud Functions or local)
     - Search in Cloud console "Cloud run functions"
     - Click "Cloud run functions"
     - Click "Enable"
-    
-
+    - Click at button that near with "Google cloud" 
+    - Select project : **OCR_Running**
 - **AI**: Google Cloud Vision API (Text Detection)
 - **Automation**: Cloud Scheduler (triggers worker) ******Additional!!******
 - **Auth**: Service Account (Sheets + Drive scopes)

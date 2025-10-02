@@ -331,6 +331,7 @@ For run logic operation automatically, Example logic runs every 30 minutes --> T
 1. Improve detecting "Distance" --> can improve at block **"Smart parsers"**
 2. Improve detecting "Duration" --> can improve at block **"Smart parsers"**
 3. Improve detecting "Date" --> can improve at block **Smart Date Parser (returns M/D/YYYY)"**
+4. Improve model OCR --> This project use pre-train form google, You can improve it better. Good luck!! 
 
 
 

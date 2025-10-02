@@ -64,9 +64,11 @@ We process three photo contexts:
   * Link response with Google sheet 
     - Click "Response"
     - Click "View in Sheets"
+      ![forms response page](image/forms_response_page.png "forms response page")
     - tab "Select destination for response" --> Select "Create a new spreadsheet"
     - Click "Create"
   * Click "View in Sheets" --> You will go to sheet that have response from participants
+      ![response data](image/response_data.png "response data")
 - **Cloud**: Google cloud platform - For using google cloud resources
     - Search and Click "Google cloud console" web
     - Click "Get started for free" --> Fill information --> Click "Agree & continue"
@@ -218,7 +220,7 @@ For run logic operation automatically, Example logic runs every 30 minutes --> T
         - URL : Using url of ocr-sheet function (you can get by going to cloud run function and click into **ocr-sheet**, you can see the links following below picture)
 
             ![Function url](image/function_url.png "Function url")
-            
+
         - HTTP method : POST
         - Auth heafer : Add OIDC token
         - Service account : Scheduler-invoker

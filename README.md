@@ -276,13 +276,13 @@ For run logic operation automatically, Example logic runs every 30 minutes --> T
     * Configuration optional settings (No need to edit)
     * Click "Create"
   3. Give permission to schedule job that was created at functions 
-  * Expect Result : These function can trigger by scheduler
-    1. Go to **"Cloud run function"**
-    2. Click select box in front of function **"ocr-sheet" and "summary-daily-record"** 
-    3. Click "Permissions"
-    4. Click "Add principal"
-    5. New principals : scheduler-invoker@......iam.gserviceaccount.com ( You can copy it from "Navigation menu > IAM&Admin > Service Accounts" page )
-    6. Role : Cloud Run Invoker
+    * Expect Result : These function can trigger by scheduler
+      - Go to **"Cloud run function"**
+      - Click select box in front of function **"ocr-sheet" and "summary-daily-record"** 
+      - Click "Permissions"
+      - Click "Add principal"
+      - New principals : scheduler-invoker@......iam.gserviceaccount.com ( You can copy it from "Navigation menu > IAM&Admin > Service Accounts" page )
+      - Role : Cloud Run Invoker
 
 ### - Script logic and detail -  
 ### 4.4 Script Behavior (`ocr_sheet.py`)

@@ -237,6 +237,7 @@ We process three photo contexts:
 ### 4.3 Automation process
 For run logic operation automatically, Example logic runs every 30 minutes --> Text detection every 30 minutes.
   1. Create 1st schedule : Run "ocr-sheet" function automatically to get detect result every 30 minutes
+  
     * Click "Create job"
     * Define the schedule
         - Name : forms-ocr-job

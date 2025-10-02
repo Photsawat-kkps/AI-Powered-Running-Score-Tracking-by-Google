@@ -85,9 +85,17 @@ We process three photo contexts:
 ### 4.2 Summary result
 - Summary daily datas and merge the distance and duration columns for indoor and outdoor runs using script - **summary_daily.py** 
 - **Let the committee review and validate the data --> Finish !!**
+
   How to use?
   1. Copy **osummary_daily.py** to cloud run
   2. Edit the **sheet_id**
+      - SPREADSHEET_ID   = os.getenv("SPREADSHEET_ID", **"....INPUT YOUR SHEET-ID...."**)
+
+  How to find sheet-id?
+  Go to your sheet and copy your sheet id following the below picture.
+
+    ![Sheet id](image/sheet_id.png "Sheet id")
+
   3. **Click Run** 
 
 ![Summary step](image/Summary_step.png "Summary step")

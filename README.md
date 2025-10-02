@@ -79,14 +79,50 @@ We process three photo contexts:
       * Project name : **OCR_Running**
       * Location : No organization
 - **Runtime**: (Cloud Run / Cloud Functions or local)
+  For run logic operation for text detection system.
     - Search in Cloud console "Cloud run functions"
     - Click "Cloud run functions"
     - Click "Enable"
     - Click at button that near with "Google cloud" 
     - Select project : **OCR_Running**
 - **AI**: Google Cloud Vision API (Text Detection)
+  For using AI to help detecting texts in photos
+    - Search in Cloud console "Cloud Vision API"
+    - Click "Cloud Vision API"
+    - Click "Enable"
 - **Automation**: Cloud Scheduler (triggers worker) ******Additional!!******
+  For run logic operation automatically, Example logic runs every 30 minutes --> Text detection every 30 minutes. 
+    - Search in Cloud console "Cloud Scheduler"
+    - Click "Cloud Scheduler"
+    - Click "Enable"
 - **Auth**: Service Account (Sheets + Drive scopes)
+  For create authority for working on cloud and use resouces securely.
+    - Click Hamburgur button( Navigation Menu. )
+    - Click "IAM & Admin"
+    - Click "Service Accounts"
+    - Click "+ Create service account"
+      1. 1st service account : forms-ocr-sa
+        - Fill information
+            1. Create service account
+              * Service account name : forms-ocr-sa
+              * Service account ID : forms-ocr-sa
+                Click "Continue"
+            2. Permissions(Optional)
+              * Serect a role : Quick access "Basic", Roles "Editor"
+              Click "Continue"
+            3. Principals with access (optional) "No important"
+              Click "Done"
+      2. 2nd service account : scheduler-invoker
+        - Fill information
+            1. Create service account
+              * Service account name : scheduler-invoker
+              * Service account ID : scheduler-invoker
+                Click "Continue"
+            2. Permissions(Optional)
+              * Serect a role : Quick access "Basic", Roles "Editor"
+              Click "Continue"
+            3. Principals with access (optional) "No important"
+              Click "Done"
 
 ---
 
@@ -114,7 +150,7 @@ We process three photo contexts:
           - Runtime : Python 3.13
           - Authentication : Require authentication
           - Containers, Volumes, Networking, Security --> Security
-              - Service account : ocr-sheet
+              - Service account : forms-ocr-sa (that have been created at Topic 3.Auth)
       4. Create
 
           ![Cloud run function](image/Cloud_run_function.png "Cloud run function")

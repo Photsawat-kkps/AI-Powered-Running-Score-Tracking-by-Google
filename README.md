@@ -67,11 +67,12 @@ We process three photo contexts:
 ### 4.1 OCR operation
 - A python script - **ocr_sheet.py** on **Cloud run** calls the **Cloud Vision API** for text detection ( all on **Google Cloud** ).
 - Detection results are written to a new column in the worksheet, and validation logic checks the values.
+
   How to use?
   1. Copy **ocr_sheet.py** to cloud run.
   2. Edit the **sheet_id** in the script.
       - SPREADSHEET_ID   = os.getenv("SPREADSHEET_ID", **"....INPUT YOUR SHEET-ID...."**)
-      
+
   How to find sheet-id?
   Go to your sheet and copy your sheet id following the below picture.
 

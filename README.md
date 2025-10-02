@@ -67,11 +67,24 @@ We process three photo contexts:
     - tab "Select destination for response" --> Select "Create a new spreadsheet"
     - Click "Create"
   * Click "View in Sheets" --> You will go to sheet that have response from participants
-
-- **Storage**: Google Drive (form uploads) 
 - **Cloud**: Google cloud platform
+    - Search and Click "Google cloud console" web
+    - Click "Get started for free" --> Fill information --> Click "Agree & continue"
+    - Add credit card **"Important"** (If want to use service following this project, have to add credit card, but this project don't have cost because It is in free tier condition of google could)
+    - Click Hamburgur button( Navigation Menu. )
+    - Click "IAM & Admin"
+    - Manage Resources
+    - Click "create project"
+    - Fill information
+      * Project name : **(Up on you)**
+      * Location : No organization
+- **Runtime**: (Cloud Run / Cloud Functions or local)
+    - Search in Cloud console "Cloud run functions"
+    - Click "Cloud run functions"
+    - Click "Enable"
+    
+
 - **AI**: Google Cloud Vision API (Text Detection)
-- **Runtime**: Python 3.11 (Cloud Run / Cloud Functions or local)
 - **Automation**: Cloud Scheduler (triggers worker) ******Additional!!******
 - **Auth**: Service Account (Sheets + Drive scopes)
 

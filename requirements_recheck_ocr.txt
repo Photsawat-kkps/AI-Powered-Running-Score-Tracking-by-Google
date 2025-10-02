@@ -1,0 +1,14 @@
+# HTTP function runtime
+functions-framework
+Flask
+
+# Google APIs (Sheets/Drive via googleapiclient)
+google-api-python-client
+google-auth
+google-auth-httplib2
+
+# Cloud Vision OCR
+google-cloud-vision
+
+# Image validation (Pillow/PIL)
+pillow

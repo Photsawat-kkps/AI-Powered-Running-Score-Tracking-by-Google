@@ -52,60 +52,60 @@ We process three photo contexts:
 
 ## 3) Prepare Tech Stack
 1. **Account**: Google Account - For using google resources
-  * Create Google account
+    * Create Google account
 2. **Storage**: Google Drive (form uploads) - For keep data such as Forms, Sheet, Photos
-  * have automatically with google account
+    * have automatically with google account
 3. **Data**: Google Sheets - For keep response data from participants
-  * can use automatically because google account
+    * can use automatically because google account
 4. **Intake (Form UI)**: Google Forms - For creating the questionaire to participants
-  * Creater Google Forms 
-  * Use response schema in 2nd topic to create question
-  * ( Google forms will place in your google drive)
-  * Link response with Google sheet 
-    - Click "Response"
-    - Click "View in Sheets"
+    * Creater Google Forms 
+    * Use response schema in 2nd topic to create question
+    * ( Google forms will place in your google drive)
+    * Link response with Google sheet 
+      - Click "Response"
+      - Click "View in Sheets"
 
-      ![forms response page](image/forms_response_page.png "forms response page")
+        ![forms response page](image/forms_response_page.png "forms response page")
 
-    - tab "Select destination for response" --> Select "Create a new spreadsheet"
-    - Click "Create"
-  * Click "View in Sheets" --> You will go to sheet that have response from participants
+      - tab "Select destination for response" --> Select "Create a new spreadsheet"
+      - Click "Create"
+    * Click "View in Sheets" --> You will go to sheet that have response from participants
 
-      ![response data](image/response_data.png "response data")
+        ![response data](image/response_data.png "response data")
 
 5. **Cloud**: Google cloud platform - For using google cloud resources
-    - Search and Click "Google cloud console" web
-    - Click "Get started for free" --> Fill information --> Click "Agree & continue"
-    - Add credit card **"Important"** (If want to use service following this project, have to add credit card, but this project don't have cost because It is in free tier condition of google could)
-    - Click Hamburgur button( Navigation Menu. )
-    - Click "IAM & Admin"
-    - Manage Resources
-    - Click "create project"
-    - Fill information
-      * Project name : **OCR_Running**
-      * Location : No organization
+    * Search and Click "Google cloud console" web
+    * Click "Get started for free" --> Fill information --> Click "Agree & continue"
+    * Add credit card **"Important"** (If want to use service following this project, have to add credit card, but this project don't have cost because It is in free tier condition of google could)
+    * Click Hamburgur button( Navigation Menu. )
+    * Click "IAM & Admin"
+    * Manage Resources
+    * Click "create project"
+    * Fill information
+      - Project name : **OCR_Running**
+      - Location : No organization
 6. **Runtime**: (Cloud Run / Cloud Functions or local) - For run logic operation for text detection system.
-    - Search in Cloud console "Cloud run functions"
-    - Click "Cloud run functions"
-    - Click "Enable"
-    - Click at button that near with "Google cloud" 
-    - Select project : **OCR_Running**
+    * Search in Cloud console "Cloud run functions"
+    * Click "Cloud run functions"
+    * Click "Enable"
+    * Click at button that near with "Google cloud" 
+    * Select project : **OCR_Running**
 7. **AI**: Google Cloud Vision API (Text Detection) - For using AI to help detecting texts in photos
-    - Search in Cloud console "Cloud Vision API"
-    - Click "Cloud Vision API"
-    - Click "Enable"
+    * Search in Cloud console "Cloud Vision API"
+    * Click "Cloud Vision API"
+    * Click "Enable"
 8. **Automation**: Cloud Scheduler (triggers worker) *****Additional!!***** For run logic operation automatically, Example logic runs every 30 minutes --> Text detection every 30 minutes. 
-    - Search in Cloud console "Cloud Scheduler"
-    - Click "Cloud Scheduler"
-    - Click "Enable"
+    * Search in Cloud console "Cloud Scheduler"
+    * Click "Cloud Scheduler"
+    * Click "Enable"
 9. **Auth**: Service Account (Sheets + Drive scopes) - For create authority for working on cloud and use resouces securely.
-    - Click Hamburgur button( Navigation Menu. )
-    - Click "IAM & Admin"
-    - Click "Service Accounts"
+    * Click Hamburgur button( Navigation Menu. )
+    * Click "IAM & Admin"
+    * Click "Service Accounts"
 
         ![service account page](image/service_account_page.png "service account page")
 
-    - Click "+ Create service account"
+    * Click "+ Create service account"
       1. 1st service account : forms-ocr-sa (For create authority to access google sheet and drive & use Cloud vision AI)
         - Fill information
             1. Create service account

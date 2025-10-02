@@ -68,6 +68,8 @@ We process three photo contexts:
 - A python script - **ocr_sheet.py** on **Cloud run** calls the **Cloud Vision API** for text detection ( all on **Google Cloud** ).
 - Detection results are written to a new column in the worksheet, and validation logic checks the values.
 
+  ![OCR process](image/OCR_process.png "OCR process")
+
   How to use?
   1. Edit the **sheet_id** in the script.
     - SPREADSHEET_ID   = os.getenv("SPREADSHEET_ID", **"....INPUT YOUR SHEET-ID...."**)
@@ -109,8 +111,6 @@ We process three photo contexts:
         - It will open the cloud terminal and have command existed.
         - Type "Enter" 
         - Finish --> see the result at your google sheet.
-
-![OCR process](image/OCR_process.png "OCR process")
 
 ### 4.2 Summary result
 - Summary daily datas and merge the distance and duration columns for indoor and outdoor runs using script - **summary_daily.py** 

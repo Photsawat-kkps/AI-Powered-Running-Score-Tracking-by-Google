@@ -326,7 +326,7 @@ We process three photo contexts:
 5. Column **"Check Date"** : If it equal --> "OK", not equal --> "Different" , not have to compare --> "N/A"
 6. Column **"Summary"** : if column "Value condition" = OK, "Check distance with input distance" = OK and "Check Date" = OK --> answer "OK", if not answer "NG"
 
-  ![Summary result](image/summary_result.png "Summary result")
+    ![Summary result](image/summary_result.png "Summary result")
 
 ---
 

@@ -198,8 +198,8 @@ We process three photo contexts:
   3. Run function
     ** Same method with step "Run function" of OCR operation.
 
-  ### 4.3 Automation process (Additional !!) 
-  For run logic operation automatically, Example logic runs every 30 minutes --> Text detection every 30 minutes.
+### 4.3 Automation process (Additional !!) 
+For run logic operation automatically, Example logic runs every 30 minutes --> Text detection every 30 minutes.
   
 
 ### - Script logic and detail -  

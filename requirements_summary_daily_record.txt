@@ -1,0 +1,5 @@
+functions-framework==3.*
+google-api-python-client>=2.128.0
+google-auth>=2.32.0
+google-auth-httplib2>=0.2.0
+httplib2>=0.20.4

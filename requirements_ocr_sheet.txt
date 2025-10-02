@@ -1,0 +1,18 @@
+# Web/Function runtime
+functions-framework==3.*
+
+# Google APIs (Sheets/Drive)
+google-api-python-client==2.*
+google-auth==2.*
+google-auth-httplib2==0.2.*
+httplib2==0.22.*
+
+# Google Cloud clients
+google-cloud-vision==3.*         # OCR
+google-cloud-logging==3.*        # ส่ง log เข้า Cloud Logging
+
+# (ตัวแปลง/เงื่อนไขเวอร์ชัน protobuf/grpc ให้ปลอดภัย)
+grpcio==1.66.*
+protobuf==4.25.*
+
+Pillow>=10

@@ -216,7 +216,9 @@ For run logic operation automatically, Example logic runs every 30 minutes --> T
     3. Configure the execution
         - Target tipe : HTTP
         - URL : Using url of ocr-sheet function (you can get by going to cloud run function and click into **ocr-sheet**, you can see the links following below picture)
+
             ![Function url](image/function_url.png "Function url")
+            
         - HTTP method : POST
         - Auth heafer : Add OIDC token
         - Service account : Scheduler-invoker

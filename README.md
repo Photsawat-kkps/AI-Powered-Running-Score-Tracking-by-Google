@@ -108,6 +108,7 @@ We process three photo contexts:
               Click "Continue"
             3. Principals with access (optional) "No important"
               Click "Done"
+            4. Get Service Account : forms-ocr-sa@......iam.gserviceaccount.com ( It will show on "IAM&Admin > Service Accounts" page )
       2. 2nd service account : scheduler-invoker (For create authority to control scheduler service)
         - Fill information
             1. Create service account
@@ -119,6 +120,7 @@ We process three photo contexts:
               Click "Continue"
             3. Principals with access (optional) "No important"
               Click "Done"
+            4. Get Service Account : scheduler-invoker@......iam.gserviceaccount.com ( It will show on "IAM&Admin > Service Accounts" page )
 
 ---
 
@@ -175,7 +177,7 @@ We process three photo contexts:
           ![ocrscipt_result](image/indoor_outdoor_result.png "ocrscipt_result")
 
 ### 4.2 Summary result
-- Summary daily datas and merge the distance and duration columns for indoor and outdoor runs using script - **summary_daily.py** 
+- Summary data(yesterday data) to daily form and merge the distance and duration columns for indoor and outdoor runs using script - **summary_daily.py** 
 - **Let the committee review and validate the data --> Finish !!**
 
   ![Summary step](image/Summary_step.png "Summary step")
@@ -198,9 +200,54 @@ We process three photo contexts:
   3. Run function
     ** Same method with step "Run function" of OCR operation.
 
+  4. Manual using
+    Since this script have operation "Summarized data(yesterday data) to daily form", Thus if we want to summarize today data, we should run this script tomorrow.
+
 ### 4.3 Automation process (Additional !!) 
 For run logic operation automatically, Example logic runs every 30 minutes --> Text detection every 30 minutes.
-  
+  1. Create 1st schedule : Run "ocr-sheet" function automatically to get detect result every 30 minutes
+    1. Click "Create job"
+    2. Define the schedule
+        - Name : forms-ocr-job
+        - Region : asia-southeast1 (Singapore)
+        - Frequency : */30 * * * *  ( --> It means every 30 minutes )
+        - Timezone : Indochina Time (ICT) UTC+7 (Bangkok)
+        Click "Continue"
+    3. Configure the execution
+        - Target tipe : HTTP
+        - URL : Using url of ocr-sheet function (you can get by going to cloud run function and click into **ocr-sheet**, you can see the links following below picture)
+            ![Function url](image/function_url.png "Function url")
+        - HTTP method : POST
+        - Auth heafer : Add OIDC token
+        - Service account : Scheduler-invoker
+        - Audience : **"same URL with Above URL"**
+    4. Configuration optional settings (No need to edit)
+    5. Click "Create"
+  2. Create 2nd schedule : Run "summary-daily-record" function automatically to summary result(yesterday data) on 02:00 AM
+    1. Click "Create job"
+    2. Define the schedule
+        - Name : summary-result-job
+        - Region : asia-southeast1 (Singapore)
+        - Frequency : 0 2 * * *( --> It means every day at 02:00:00 AM )
+        - Timezone : Indochina Time (ICT) UTC+7 (Bangkok)
+        Click "Continue"
+    3. Configure the execution
+        - Target tipe : HTTP
+        - URL : Using url of summary_daily_record function (you can get by going to cloud run function and click into **summary_daily_record**, **same method with 1st schedule
+        - HTTP method : POST
+        - Auth heafer : Add OIDC token
+        - Service account : Scheduler-invoker
+        - Audience : **"same URL with Above URL"**
+    4. Configuration optional settings (No need to edit)
+    5. Click "Create"
+  3. Give permission to schedule job that was created at functions 
+    Expect Result : These function can trigger by scheduler
+    1. Go to **"Cloud run function"**
+    2. Click select box in front of function **"ocr-sheet" and "summary-daily-record"** 
+    3. Click "Permissions"
+    4. Click "Add principal"
+    5. New principals : scheduler-invoker@......iam.gserviceaccount.com ( You can copy it from "Navigation menu > IAM&Admin > Service Accounts" page )
+    6. Role : Cloud Run Invoker
 
 ### - Script logic and detail -  
 ### 4.4 Script Behavior (`ocr_sheet.py`)

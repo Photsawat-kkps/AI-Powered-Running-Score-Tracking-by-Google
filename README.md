@@ -13,7 +13,7 @@ Sports Day results come as **photos** — scoreboards and watch/treadmill screen
   2. Event Context & Submitted data
   3. Prepare Tech Stack
   4. End‑to‑End Pipeline (Simplified)
-  5. Improvement
+  5. Future Improvement
 
 ---
 
@@ -327,7 +327,7 @@ For run logic operation automatically, Example logic runs every 30 minutes --> T
 
 ---
 
-## 5) Improvement : If you want to improve parser logic
+## 5) Future Improvement : If you want to improve parser logic
 1. Improve detecting "Distance" --> can improve at block **"Smart parsers"**
 2. Improve detecting "Duration" --> can improve at block **"Smart parsers"**
 3. Improve detecting "Date" --> can improve at block **Smart Date Parser (returns M/D/YYYY)"**

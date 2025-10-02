@@ -237,7 +237,7 @@ We process three photo contexts:
 ### 4.3 Automation process
 - For run logic operation automatically, Example logic runs every 30 minutes --> Text detection every 30 minutes.
 
-  1. Create 1st schedule : Run "ocr-sheet" function automatically to get detect result every 30 minutes
+1. Create 1st schedule : Run "ocr-sheet" function automatically to get detect result every 30 minutes
     * Click "Create job"
     * Define the schedule
         - Name : forms-ocr-job
@@ -259,7 +259,7 @@ We process three photo contexts:
 
     * Configuration optional settings (No need to edit)
     * Click "Create"
-  2. Create 2nd schedule : Run "summary-daily-record" function automatically to summary result(yesterday data) on 02:00:00 AM
+2. Create 2nd schedule : Run "summary-daily-record" function automatically to summary result(yesterday data) on 02:00:00 AM
     * Click "Create job"
     * Define the schedule
         - Name : summary-result-job
@@ -276,7 +276,7 @@ We process three photo contexts:
         - Audience : **"same URL with Above URL"**
     * Configuration optional settings (No need to edit)
     * Click "Create"
-  3. Give permission to schedule job that was created at functions 
+3. Give permission to schedule job that was created at functions 
     * Expect Result : These function can trigger by scheduler
       - Go to **"Cloud run function"**
       - Click select box in front of function **"ocr-sheet" and "summary-daily-record"** 

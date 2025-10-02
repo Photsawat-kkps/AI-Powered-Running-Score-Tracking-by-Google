@@ -166,12 +166,12 @@ We process three photo contexts:
           ![Ocr sheet script](image/ocr_sheet_script.png "Ocr sheet script")
 
   3. Run function
-    1. Click "Test"
-    2. Click "Test in Cloud Shell"
+      1. Click "Test"
+      2. Click "Test in Cloud Shell"
         - It will open the cloud terminal and have command existed.
         - Type "Enter" 
         - Finish --> see the result at your google sheet.
-        
+
             ![ocrscipt_result](image/indoor_outdoor_result.png "ocrscipt_result")
 
 ### 4.2 Summary result

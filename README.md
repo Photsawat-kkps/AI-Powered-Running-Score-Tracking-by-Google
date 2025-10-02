@@ -139,6 +139,7 @@ We process three photo contexts:
         - It will open the cloud terminal and have command existed.
         - Type "Enter" 
         - Finish --> see the result at your google sheet.
+            ![ocrscipt_result](image/indoor_outdoor_result.png "ocrscipt_result")
 
 ### 4.2 Summary result
 - Summary daily datas and merge the distance and duration columns for indoor and outdoor runs using script - **summary_daily.py** 
@@ -193,8 +194,6 @@ We process three photo contexts:
 - If It found **Duration** at both of 1st column and 2nd column --> Choose minimum duration for answer
 - If It not found **Distance and Duration** --> **Column "In_Status" =  OK**
 - If It not found **Distance and Duration** --> **Column "In_Status" =  NG**
-
-![ocrscipt_result](image/indoor_outdoor_result.png "ocrscipt_result")
 
 ### 4.4 Script Behavior (`summary_daily.py`)
 **Result**

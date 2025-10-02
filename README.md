@@ -94,7 +94,7 @@ We process three photo contexts:
     * Search in Cloud console "Cloud Vision API"
     * Click "Cloud Vision API"
     * Click "Enable"
-8. **Automation**: Cloud Scheduler (triggers worker) *****Additional!!***** For run logic operation automatically, Example logic runs every 30 minutes --> Text detection every 30 minutes. 
+8. **Automation**: Cloud Scheduler (triggers worker) - For run logic operation automatically, Example logic runs every 30 minutes --> Text detection every 30 minutes. 
     * Search in Cloud console "Cloud Scheduler"
     * Click "Cloud Scheduler"
     * Click "Enable"
@@ -222,7 +222,7 @@ We process three photo contexts:
   4. Manual using
     Since this script have operation "Summarized data(yesterday data) to daily form", Thus if we want to summarize today data, we should run this script tomorrow.
 
-### 4.3 Automation process (Additional !!) 
+### 4.3 Automation process
 For run logic operation automatically, Example logic runs every 30 minutes --> Text detection every 30 minutes.
   1. Create 1st schedule : Run "ocr-sheet" function automatically to get detect result every 30 minutes
     1. Click "Create job"
@@ -244,7 +244,7 @@ For run logic operation automatically, Example logic runs every 30 minutes --> T
         - Audience : **"same URL with Above URL"**
     4. Configuration optional settings (No need to edit)
     5. Click "Create"
-  2. Create 2nd schedule : Run "summary-daily-record" function automatically to summary result(yesterday data) on 02:00 AM
+  2. Create 2nd schedule : Run "summary-daily-record" function automatically to summary result(yesterday data) on 02:00:00 AM
     1. Click "Create job"
     2. Define the schedule
         - Name : summary-result-job

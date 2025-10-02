@@ -287,17 +287,17 @@ We process three photo contexts:
 
 ### - Script logic and detail -  
 ### 4.4 Script Behavior (`ocr_sheet.py`)
-**Result**
+**1. Result**
 1. Distance at **column "Out_Distance_km"**
 2. Duration at **column "Out_Duration_hms"**
 3. Date on running record photos **column "Shot_Date"**
 
-**Running validation**
+**2. Running validation**
 - Distance need at least 2.00 km --> If not in condition **Column "Out_Status" = Distance Insufficient**
 - Duration need not over 02:00:00 Hour --> If not in condition **Column "Out_Status" = Time Over**
 - if Distance and Duration aren't in condition **Column "Out_Status" = All Cindition Insufficient**
 
-**Outdoor validation**
+**3. Outdoor validation**
 - For person that runs at outdoor **("ลักษณะสถานที่วิ่ง (Where did you run?)" = กลางแจ้ง/นอกบ้าน (Outdoor))** script will check photo both of running result 
 
   - at **1st column** "รูปถ่ายแสดงระยะทาง Outdoor และเวลาจากอุปกรณ์สมาร์ทวอทช์ หรือแอปพลิเคชันจากมือถือ  (Photo showing distance and time from a smartwatch or mobile application)"
@@ -307,7 +307,7 @@ We process three photo contexts:
 - If It not found at **1st column**, It will continue checking at **2nd column**, and If it found **Distance and Duration** --> **Column "Out_Status" =  Miss Box**
 - If not found Distance and Duration --> **Column "Out_Status" =  NG**
 
-**Indoor validation**
+**4. Indoor validation**
 - For person that runs at indoor **("ลักษณะสถานที่วิ่ง (Where did you run?)" = ในร่ม (Indoor))** 
     - Script will check **Distance** at **1st column** "รูปถ่ายระยะทางจากเครื่องออกกำลังกาย (Photo of the distance display from the exercise machine.)"
     - Script will check **Duration** at **both of 2nd column** "รูปถ่ายแสดงระยะทาง Indoor และเวลาจากอุปกรณ์สมาร์ทวอทช์ หรือแอปพลิเคชันจากมือถือ  (Photo showing distance and time from a smartwatch or mobile application)" and 1st column "รูปถ่ายระยะทางจากเครื่องออกกำลังกาย (Photo of the distance display from the exercise machine.)" 

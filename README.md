@@ -265,7 +265,7 @@ For run logic operation automatically, Example logic runs every 30 minutes --> T
     4. Configuration optional settings (No need to edit)
     5. Click "Create"
   3. Give permission to schedule job that was created at functions 
-    Expect Result : These function can trigger by scheduler
+  * Expect Result : These function can trigger by scheduler
     1. Go to **"Cloud run function"**
     2. Click select box in front of function **"ocr-sheet" and "summary-daily-record"** 
     3. Click "Permissions"

@@ -119,18 +119,19 @@ We process three photo contexts:
   ![Summary step](image/Summary_step.png "Summary step")
 
   How to use?
-  1. Create a function **summary_daily_record** at cloud run functions service on Google cloud platform.
+
+  1. Edit the **sheet_id** in the script.
+      - SPREADSHEET_ID   = os.getenv("SPREADSHEET_ID", **"....INPUT YOUR SHEET-ID...."**)
+
+      ** Same method with step "Edit the **sheet_id**" of OCR operation.
+
+  2. Create a function **summary_daily_record** at cloud run functions service on Google cloud platform.
 
       ** Same method with step "Create a function **ocr_sheet**" of OCR operation.
       Different points are
       1. Copy code "summary_daily_record.py" in git to main.py in ocr_sheet function.
       2. Copy code "requirements_summary_daily_record.txt" in git to requirements.txt in ocr_sheet function.
       3. Function entry point : summarize_day
-
-  2. Edit the **sheet_id** in the script.
-      - SPREADSHEET_ID   = os.getenv("SPREADSHEET_ID", **"....INPUT YOUR SHEET-ID...."**)
-
-      ** Same method with step "Edit the **sheet_id**" of OCR operation.
 
   3. Run function
     ** Same method with step "Run function" of OCR operation.

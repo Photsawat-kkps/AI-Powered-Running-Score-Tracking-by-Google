@@ -116,18 +116,24 @@ We process three photo contexts:
 - Summary daily datas and merge the distance and duration columns for indoor and outdoor runs using script - **summary_daily.py** 
 - **Let the committee review and validate the data --> Finish !!**
 
+  ![Summary step](image/Summary_step.png "Summary step")
+
   How to use?
-  1. Create a function **summary_daily** at cloud run functions service on Google cloud platform.
+  1. Create a function **summary_daily_record** at cloud run functions service on Google cloud platform.
 
       ** Same method with step "Create a function **ocr_sheet**" of OCR operation.
+      Different points are
+      1. Copy code "summary_daily_record.py" in git to main.py in ocr_sheet function.
+      2. Copy code "requirements_summary_daily_record.txt" in git to requirements.txt in ocr_sheet function.
+      3. Function entry point : summarize_day
+
   2. Edit the **sheet_id** in the script.
       - SPREADSHEET_ID   = os.getenv("SPREADSHEET_ID", **"....INPUT YOUR SHEET-ID...."**)
 
       ** Same method with step "Edit the **sheet_id**" of OCR operation.
-  3. **Click Run** 
 
-![Summary step](image/Summary_step.png "Summary step")
-
+  3. Run function
+    ** Same method with step "Run function" of OCR operation.
 
 ### - Script logic and detail -  
 ### 4.3 Script Behavior (`ocr_sheet.py`)

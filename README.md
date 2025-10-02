@@ -101,15 +101,11 @@ We process three photo contexts:
 - **Let the committee review and validate the data --> Finish !!**
 
   How to use?
-  1. Copy **osummary_daily.py** to cloud run
-  2. Edit the **sheet_id**
+  1. Create a function **summary_daily** at cloud run functions service on Google cloud platform.
+    Same method with step "Create a function **ocr_sheet**".
+  2. Edit the **sheet_id** in the script.
       - SPREADSHEET_ID   = os.getenv("SPREADSHEET_ID", **"....INPUT YOUR SHEET-ID...."**)
-
-  How to find sheet-id?
-  Go to your sheet and copy your sheet id following the below picture.
-
-    ![Sheet id](image/sheet_id.png "Sheet id")
-
+    Same method with step "Edit the **sheet_id**" of OCR operation.
   3. **Click Run** 
 
 ![Summary step](image/Summary_step.png "Summary step")

@@ -81,6 +81,8 @@ We process three photo contexts:
           - Containers, Volumes, Networking, Security --> Security
               - Service account : ocr-sheet
       4. Create
+  
+    ![Cloud run function](image/Cloud_run_function.png "Cloud run function")
 
   2. Edit the **sheet_id** in the script.
       - SPREADSHEET_ID   = os.getenv("SPREADSHEET_ID", **"....INPUT YOUR SHEET-ID...."**)

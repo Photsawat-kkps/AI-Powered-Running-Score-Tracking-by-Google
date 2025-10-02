@@ -69,7 +69,12 @@ We process three photo contexts:
 - Detection results are written to a new column in the worksheet, and validation logic checks the values.
 
   How to use?
-  1. Create a function **ocr_sheet** at cloud run functions service on Google cloud platform.
+  1. Edit the **sheet_id** in the script.
+    - SPREADSHEET_ID   = os.getenv("SPREADSHEET_ID", **"....INPUT YOUR SHEET-ID...."**)
+
+    ![Sheet id](image/sheet_id.png "Sheet id")
+
+  2. Create a function **ocr_sheet** at cloud run functions service on Google cloud platform.
       1. Search "cloud run functions"
       2. Click "Write a function"
       3. Fill information to create
@@ -93,17 +98,17 @@ We process three photo contexts:
       10. Function entry point : ocr_sheet
       11. Click "Save and redeploy"
   
-          ![ocr sheet script](image/ocr_sheet_script.png "ocr sheet script")
-
-  2. Edit the **sheet_id** in the script.
-      - SPREADSHEET_ID   = os.getenv("SPREADSHEET_ID", **"....INPUT YOUR SHEET-ID...."**)
+          ![Ocr sheet script](image/ocr_sheet_script.png "Ocr sheet script")
 
   How to find sheet-id?
   Go to your sheet and copy your sheet id following the below picture.
 
-    ![Sheet id](image/sheet_id.png "Sheet id")
-
-  3. **Click Run** 
+  3. Run function
+    1. Click "Test"
+    2. Click "Test in Cloud Shell"
+        - It will open the cloud terminal and have command existed.
+        - Type "Enter" 
+        - Finish --> see the result at your google sheet.
 
 ![OCR process](image/OCR_process.png "OCR process")
 

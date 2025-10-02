@@ -131,6 +131,13 @@ We process three photo contexts:
               Click "Done"
             4. Get Service Account : scheduler-invoker@......iam.gserviceaccount.com ( It will show on "IAM&Admin > Service Accounts" page )
     * Give permission for access drives that keep photos and sheet (let script operation can work with data in drive)
+      1. Go to your Google Drive
+      2. Find the folder that keep photo and response that participants submitted.
+      3. Click "Hamburger button"
+      4. Click "Share" and Click "Share"
+      5. "Add people,groups,..." panel : fill your service account **"forms-ocr-sa@......iam.gserviceaccount.com"** ( It will show on "IAM&Admin > Service Accounts" page )
+      6. Select : Editor
+      7. Click "Send"
 
         ![drive permission](image/drive_permission.png "drive permission")
 

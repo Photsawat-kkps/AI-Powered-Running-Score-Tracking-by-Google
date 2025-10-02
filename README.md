@@ -244,6 +244,7 @@ For run logic operation automatically, Example logic runs every 30 minutes --> T
         - Frequency : */30 * * * *  ( --> It means every 30 minutes )
         - Timezone : Indochina Time (ICT) UTC+7 (Bangkok)
         Click "Continue"
+
     3. Configure the execution
         - Target tipe : HTTP
         - URL : Using url of ocr-sheet function (you can get by going to cloud run function and click into **ocr-sheet**, you can see the links following below picture)
@@ -254,6 +255,7 @@ For run logic operation automatically, Example logic runs every 30 minutes --> T
         - Auth heafer : Add OIDC token
         - Service account : Scheduler-invoker
         - Audience : **"same URL with Above URL"**
+
     4. Configuration optional settings (No need to edit)
     5. Click "Create"
   2. Create 2nd schedule : Run "summary-daily-record" function automatically to summary result(yesterday data) on 02:00:00 AM

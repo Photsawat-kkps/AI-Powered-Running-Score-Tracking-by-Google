@@ -130,6 +130,9 @@ We process three photo contexts:
             3. Principals with access (optional) "No important"
               Click "Done"
             4. Get Service Account : scheduler-invoker@......iam.gserviceaccount.com ( It will show on "IAM&Admin > Service Accounts" page )
+    * Give permission for access drives that keep photos and sheet (let script operation can work with data in drive)
+
+          ![drive permission](image/drive_permission.png "drive permission")
 
 ---
 

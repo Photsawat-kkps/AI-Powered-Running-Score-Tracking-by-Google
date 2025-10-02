@@ -69,7 +69,19 @@ We process three photo contexts:
 - Detection results are written to a new column in the worksheet, and validation logic checks the values.
 
   How to use?
-  1. Copy **ocr_sheet.py** to cloud run.
+  1. Create a function **ocr_sheet** at cloud run functions service on Google cloud platform.
+      1. Search "cloud run functions"
+      2. Click "Write a function"
+      3. Select
+        - Choice : Use an lnline editor to create a function
+        - Service name : ocr-sheet
+        - Region : asia-southeast1 (Singapore)
+        - Runtime : Python 3.13
+        - Authentication : Require authentication
+        - Containers, Volumes, Networking, Security --> Security
+          - Service account : ocr-sheet
+      4. Create
+      
   2. Edit the **sheet_id** in the script.
       - SPREADSHEET_ID   = os.getenv("SPREADSHEET_ID", **"....INPUT YOUR SHEET-ID...."**)
 

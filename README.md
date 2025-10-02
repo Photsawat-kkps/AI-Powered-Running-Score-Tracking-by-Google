@@ -102,10 +102,10 @@ We process three photo contexts:
 
   How to use?
   1. Create a function **summary_daily** at cloud run functions service on Google cloud platform.
-    Same method with step "Create a function **ocr_sheet**".
+      ** Same method with step "Create a function **ocr_sheet**".
   2. Edit the **sheet_id** in the script.
       - SPREADSHEET_ID   = os.getenv("SPREADSHEET_ID", **"....INPUT YOUR SHEET-ID...."**)
-    Same method with step "Edit the **sheet_id**" of OCR operation.
+      ** Same method with step "Edit the **sheet_id**" of OCR operation.
   3. **Click Run** 
 
 ![Summary step](image/Summary_step.png "Summary step")

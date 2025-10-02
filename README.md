@@ -198,8 +198,12 @@ We process three photo contexts:
   3. Run function
     ** Same method with step "Run function" of OCR operation.
 
+  ### 4.3 Automation process (Additional !!) 
+  For run logic operation automatically, Example logic runs every 30 minutes --> Text detection every 30 minutes.
+  
+
 ### - Script logic and detail -  
-### 4.3 Script Behavior (`ocr_sheet.py`)
+### 4.4 Script Behavior (`ocr_sheet.py`)
 **Result**
 1. Distance at **column "Out_Distance_km"**
 2. Duration at **column "Out_Duration_hms"**

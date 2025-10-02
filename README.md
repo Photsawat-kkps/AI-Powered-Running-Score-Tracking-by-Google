@@ -51,13 +51,13 @@ We process three photo contexts:
 ---
 
 ## 3) Prepare Tech Stack
-- **Account**: Google Account
+- **Account**: Google Account - For using google resources
   * Create Google account
-- **Storage**: Google Drive (form uploads) 
+- **Storage**: Google Drive (form uploads) - For keep data such as Forms, Sheet, Photos
   * have automatically with google account
-- **Data**: Google Sheets
+- **Data**: Google Sheets - For keep response data from participants
   * can use automatically because google account
-- **Intake (Form UI)**: Google Forms
+- **Intake (Form UI)**: Google Forms - For creating the questionaire to participants
   * Creater Google Forms 
   * Use response schema in 2nd topic to create question
   * ( Google forms will place in your google drive)
@@ -67,7 +67,7 @@ We process three photo contexts:
     - tab "Select destination for response" --> Select "Create a new spreadsheet"
     - Click "Create"
   * Click "View in Sheets" --> You will go to sheet that have response from participants
-- **Cloud**: Google cloud platform
+- **Cloud**: Google cloud platform - For using google cloud resources
     - Search and Click "Google cloud console" web
     - Click "Get started for free" --> Fill information --> Click "Agree & continue"
     - Add credit card **"Important"** (If want to use service following this project, have to add credit card, but this project don't have cost because It is in free tier condition of google could)
@@ -78,30 +78,26 @@ We process three photo contexts:
     - Fill information
       * Project name : **OCR_Running**
       * Location : No organization
-- **Runtime**: (Cloud Run / Cloud Functions or local)
-  For run logic operation for text detection system.
+- **Runtime**: (Cloud Run / Cloud Functions or local) - For run logic operation for text detection system.
     - Search in Cloud console "Cloud run functions"
     - Click "Cloud run functions"
     - Click "Enable"
     - Click at button that near with "Google cloud" 
     - Select project : **OCR_Running**
-- **AI**: Google Cloud Vision API (Text Detection)
-  For using AI to help detecting texts in photos
+- **AI**: Google Cloud Vision API (Text Detection) - For using AI to help detecting texts in photos
     - Search in Cloud console "Cloud Vision API"
     - Click "Cloud Vision API"
     - Click "Enable"
-- **Automation**: Cloud Scheduler (triggers worker) ******Additional!!******
-  For run logic operation automatically, Example logic runs every 30 minutes --> Text detection every 30 minutes. 
+- **Automation**: Cloud Scheduler (triggers worker) ******Additional!!****** For run logic operation automatically, Example logic runs every 30 minutes --> Text detection every 30 minutes. 
     - Search in Cloud console "Cloud Scheduler"
     - Click "Cloud Scheduler"
     - Click "Enable"
-- **Auth**: Service Account (Sheets + Drive scopes)
-  For create authority for working on cloud and use resouces securely.
+- **Auth**: Service Account (Sheets + Drive scopes) - For create authority for working on cloud and use resouces securely.
     - Click Hamburgur button( Navigation Menu. )
     - Click "IAM & Admin"
     - Click "Service Accounts"
     - Click "+ Create service account"
-      1. 1st service account : forms-ocr-sa
+      1. 1st service account : forms-ocr-sa (For create authority to access google sheet and drive & use Cloud vision AI)
         - Fill information
             1. Create service account
               * Service account name : forms-ocr-sa
@@ -112,7 +108,7 @@ We process three photo contexts:
               Click "Continue"
             3. Principals with access (optional) "No important"
               Click "Done"
-      2. 2nd service account : scheduler-invoker
+      2. 2nd service account : scheduler-invoker (For create authority to control scheduler service)
         - Fill information
             1. Create service account
               * Service account name : scheduler-invoker

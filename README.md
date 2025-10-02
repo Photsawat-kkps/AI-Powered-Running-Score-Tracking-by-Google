@@ -237,15 +237,15 @@ We process three photo contexts:
 ### 4.3 Automation process
 For run logic operation automatically, Example logic runs every 30 minutes --> Text detection every 30 minutes.
   1. Create 1st schedule : Run "ocr-sheet" function automatically to get detect result every 30 minutes
-    1. Click "Create job"
-    2. Define the schedule
+    * Click "Create job"
+    * Define the schedule
         - Name : forms-ocr-job
         - Region : asia-southeast1 (Singapore)
         - Frequency : */30 * * * *  ( --> It means every 30 minutes )
         - Timezone : Indochina Time (ICT) UTC+7 (Bangkok)
         Click "Continue"
 
-    3. Configure the execution
+    * Configure the execution
         - Target tipe : HTTP
         - URL : Using url of ocr-sheet function (you can get by going to cloud run function and click into **ocr-sheet**, you can see the links following below picture)
 
@@ -256,25 +256,25 @@ For run logic operation automatically, Example logic runs every 30 minutes --> T
         - Service account : Scheduler-invoker
         - Audience : **"same URL with Above URL"**
 
-    4. Configuration optional settings (No need to edit)
-    5. Click "Create"
+    * Configuration optional settings (No need to edit)
+    * Click "Create"
   2. Create 2nd schedule : Run "summary-daily-record" function automatically to summary result(yesterday data) on 02:00:00 AM
-    1. Click "Create job"
-    2. Define the schedule
+    * Click "Create job"
+    * Define the schedule
         - Name : summary-result-job
         - Region : asia-southeast1 (Singapore)
         - Frequency : 0 2 * * *( --> It means every day at 02:00:00 AM )
         - Timezone : Indochina Time (ICT) UTC+7 (Bangkok)
         Click "Continue"
-    3. Configure the execution
+    * Configure the execution
         - Target tipe : HTTP
         - URL : Using url of summary_daily_record function (you can get by going to cloud run function and click into **summary_daily_record**, **same method with 1st schedule
         - HTTP method : POST
         - Auth heafer : Add OIDC token
         - Service account : Scheduler-invoker
         - Audience : **"same URL with Above URL"**
-    4. Configuration optional settings (No need to edit)
-    5. Click "Create"
+    * Configuration optional settings (No need to edit)
+    * Click "Create"
   3. Give permission to schedule job that was created at functions 
   * Expect Result : These function can trigger by scheduler
     1. Go to **"Cloud run function"**

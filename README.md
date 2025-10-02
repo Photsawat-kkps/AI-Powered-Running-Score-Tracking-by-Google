@@ -51,12 +51,27 @@ We process three photo contexts:
 ---
 
 ## 3) Prepare Tech Stack
+- **Account**: Google Account
+  * Create Google account
+- **Storage**: Google Drive (form uploads) 
+  * have automatically with google account
+- **Data**: Google Sheets
+  * can use automatically because google account
+- **Intake (Form UI)**: Google Forms
+  * Creater Google Forms 
+  * Use response schema in 2nd topic to create question
+  * ( Google forms will place in your google drive)
+  * Link response with Google sheet 
+    - Click "Response"
+    - Click "View in Sheets"
+    - tab "Select destination for response" --> Select "Create a new spreadsheet"
+    - Click "Create"
+  * Click "View in Sheets" --> You will go to sheet that have response from participants
+
+- **Storage**: Google Drive (form uploads) 
 - **Cloud**: Google cloud platform
 - **AI**: Google Cloud Vision API (Text Detection)
 - **Runtime**: Python 3.11 (Cloud Run / Cloud Functions or local)
-- **Intake (Form UI)**: Google Forms
-- **Data**: Google Sheets 
-- **Storage**: Google Drive (form uploads)
 - **Automation**: Cloud Scheduler (triggers worker) ******Additional!!******
 - **Auth**: Service Account (Sheets + Drive scopes)
 

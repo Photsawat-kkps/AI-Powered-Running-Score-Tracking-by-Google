@@ -317,7 +317,7 @@ We process three photo contexts:
 
   ![ocrscipt_result](image/indoor_outdoor_result.png "ocrscipt_result")
 
-### 4.4 Script Behavior (`summary_daily.py`)
+### 4.5 Script Behavior (`summary_daily.py`)
 **Result**
 1. Column **"Distance"** : Value from merging between Distance of Outdoor and Indoor.
 2. Column **"Duration"** : Value from merging between Duration of Outdoor and Indoor.

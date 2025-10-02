@@ -244,7 +244,7 @@ We process three photo contexts:
         - Region : asia-southeast1 (Singapore)
         - Frequency : */30 * * * *  ( --> It means every 30 minutes )
         - Timezone : Indochina Time (ICT) UTC+7 (Bangkok)
-        Click "Continue"
+        - Click "Continue"
 
     * Configure the execution
         - Target tipe : HTTP

@@ -172,7 +172,7 @@ We process three photo contexts:
           - Type "Enter" 
           - Finish --> see the result at your google sheet.
 
-            ![ocrscipt_result](image/indoor_outdoor_result.png "ocrscipt_result")
+          ![ocrscipt_result](image/indoor_outdoor_result.png "ocrscipt_result")
 
 ### 4.2 Summary result
 - Summary daily datas and merge the distance and duration columns for indoor and outdoor runs using script - **summary_daily.py** 

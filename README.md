@@ -72,7 +72,7 @@ We process three photo contexts:
   1. Create a function **ocr_sheet** at cloud run functions service on Google cloud platform.
       1. Search "cloud run functions"
       2. Click "Write a function"
-      3. Select
+      3. Fill information to create
           - Choice : Use an lnline editor to create a function
           - Service name : ocr-sheet
           - Region : asia-southeast1 (Singapore)
@@ -81,8 +81,19 @@ We process three photo contexts:
           - Containers, Volumes, Networking, Security --> Security
               - Service account : ocr-sheet
       4. Create
+
+          ![Cloud run function](image/Cloud_run_function.png "Cloud run function")
+
+
+      5. Click "ocr_sheet" function that be created.
+      6. Click "Source".
+      7. Click "Edit source".
+      8. Copy code "ocr_sheet.py" in git to main.py in ocr_sheet function.
+      9. Copy code "requirements_ocr_sheet.txt" in git to requirements.txt in ocr_sheet function.
+      10. Function entry point : ocr_sheet
+      11. Click "Save and redeploy"
   
-    ![Cloud run function](image/Cloud_run_function.png "Cloud run function")
+          ![ocr sheet script](image/ocr_sheet_script.png "ocr sheet script")
 
   2. Edit the **sheet_id** in the script.
       - SPREADSHEET_ID   = os.getenv("SPREADSHEET_ID", **"....INPUT YOUR SHEET-ID...."**)

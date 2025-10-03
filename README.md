@@ -14,6 +14,7 @@ Sports Day results come as **photos** — scoreboards and watch/treadmill screen
   3. Prepare Tech Stack
   4. End‑to‑End Pipeline (Simplified)
   5. Future Improvement
+  6. Authur
 
 ---
 
@@ -338,7 +339,7 @@ We process three photo contexts:
 
 ---
 
-## Authur
+## 6) Authur
 
 - Photsawat B.
 - Company Email : photsawat.buan@kkpfg.com

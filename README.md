@@ -345,7 +345,9 @@ We process three photo contexts:
 - Company Email : photsawat.buan@kkpfg.com
 
 - Personal Email : photsawat.phu@gmail.com
+- Linkedin : Photsawat Buanuam
 - IG : pht_7oi_i
+
 
 
 

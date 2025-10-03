@@ -1,0 +1,27 @@
+Custom License — No Verbatim Republishing; README Reuse Prohibited
+Copyright (c) 2025 Photsawat B.
+
+Permission is granted, free of charge, to any person obtaining a copy of this repository
+and its contents (“the Software”), to view, study, use, and create their own implementations
+or derivative works based on the ideas or code contained herein.
+
+You may publish, share, or distribute your own implementations or derivative works,
+provided that they constitute a substantial transformation or adaptation of the original
+Software and include clear attribution and a link to the original repository.
+
+You may NOT:
+1) Redistribute this repository in whole or in substantially identical form (e.g., direct
+   clone, copy-paste, or trivial edits such as renaming without meaningful changes).
+2) Reuse, reproduce, republish, or adapt the README or any documentation in this repository.
+   If you publish your own project based on this work, you must write your own
+   README/documentation independently.
+3) Claim the original repository or its documentation as your own without attribution.
+
+Attribution: Any distributed derivative work must include a notice such as:
+“Based on work by Photsawat B. — see the original repository at <URL>”.
+
+NO WARRANTY: THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY
+ARISING FROM OR IN CONNECTION WITH THE SOFTWARE OR THE USE THEREOF.
+
+For permission to redistribute verbatim copies, contact the copyright holder.

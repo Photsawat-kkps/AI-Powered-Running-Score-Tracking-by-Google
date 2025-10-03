@@ -336,6 +336,15 @@ We process three photo contexts:
 3. Improve detecting "Date" --> can improve at block **Smart Date Parser (returns M/D/YYYY)"**
 4. Improve model OCR --> This project use pre-train form google, You can improve it better. Good luck!! 
 
+---
+
+## Authur
+
+- Photsawat B.
+- Company Email : photsawat.buan@kkpfg.com
+
+- Personal Email : photsawat.phu@gmail.com
+- IG : pht_7oi_i
 
 
 
